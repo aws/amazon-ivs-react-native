@@ -35,10 +35,11 @@ def pkgData = new JsonSlurper().parseText(rootPkg.text)
 def sdk_version = pkgData.version
 
 android {
+  namespace = "com.amazonaws.ivs.reactnative.player"
   compileSdkVersion getExtOrIntegerDefault('compileSdkVersion')
   buildToolsVersion getExtOrDefault('buildToolsVersion')
   defaultConfig {
-    minSdkVersion 21
+    minSdkVersion 26
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
     versionName sdk_version
